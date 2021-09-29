@@ -44,7 +44,7 @@ USB drive exported by the RP2040 bootloader, simply boot your board into
 bootloader mode and run:
 
 ```console
-rp-hal/boards/feather_rp2040 $ cargo run --release --example <name>
+rp-hal/boards/qt_py_rp2040 $ cargo run --release --example <name>
 ```
 
 If you get an error about not being able to find `elf2uf2-rs`, try:
