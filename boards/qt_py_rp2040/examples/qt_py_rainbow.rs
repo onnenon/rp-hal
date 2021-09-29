@@ -1,6 +1,4 @@
-//! Blinks the LED on a Adafruit QT Py RP2040 board
-//!
-//! This will blink on-board LED.
+//! Continuously changes the color of the Neopixel on a Adafruit QT Py RP2040 board
 #![no_std]
 #![no_main]
 
@@ -10,6 +8,8 @@ use embedded_hal::digital::v2::OutputPin;
 use embedded_hal::timer::CountDown;
 use embedded_time::duration::Extensions;
 use panic_halt as _;
+use smart_leds::{brightness, SmartLedsWrite, RGB8};
+use ws2812_pio::Ws2812;
 
 use qt_py_rp2040::{
     hal::{
@@ -21,8 +21,6 @@ use qt_py_rp2040::{
     },
     Pins, XOSC_CRYSTAL_FREQ,
 };
-use smart_leds::{brightness, SmartLedsWrite, RGB8};
-use ws2812_pio::Ws2812;
 
 #[link_section = ".boot2"]
 #[used]
@@ -71,8 +69,6 @@ fn main() -> ! {
         clocks.peripheral_clock.freq(),
         timer.count_down(),
     );
-
-    // Infinite colour wheel loop
 
     let mut n: u8 = 128;
     loop {

@@ -1,13 +1,13 @@
-# [feather_rp2040] - Board Support for the [Adafruit Feather RP2040]
+# [qt_py_rp2040] - Board Support for the [Adafruit QT Py RP2040]
 
 You should include this crate if you are writing code that you want to run on
-an [Adafruit Feather RP2040] - a Feather form-factor RP2040 board from Adafruit.
+an [Adafruit QT Py RP2040] - an extremely small form-factor RP2040 board from Adafruit.
 
 This crate includes the [rp2040-hal], but also configures each pin of the
 RP2040 chip according to how it is connected up on the QT Py.
 
-[Adafruit Feather RP2040]: https://www.adafruit.com/product/4884
-[feather_rp2040]: https://github.com/rp-rs/rp-hal/tree/main/boards/feather_rp2040
+[Adafruit QT Py RP2040]: https://www.adafruit.com/product/4900
+[qt_py_rp2040]: https://github.com/rp-rs/rp-hal/tree/main/boards/qt_py_rp2040
 [rp2040-hal]: https://github.com/rp-rs/rp-hal/tree/main/rp2040-hal
 [Raspberry Silicon RP2040]: https://www.raspberrypi.org/products/rp2040/
 
@@ -53,9 +53,9 @@ If you get an error about not being able to find `elf2uf2-rs`, try:
 $ cargo install elf2uf2-rs, then repeating the `cargo run` command above.
 ```
 
-### [feather_blinky](./examples/feather_blinky.rs)
+### [qt_py_rainbow](./examples/qt_py_rainbow.rs)
 
-Flashes the Feather's on-board LED on and off.
+Continuously changes the color of the QT Py's onboard Neopixel.
 
 ## Contributing
 
